@@ -1,0 +1,32 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "lecture_levre"
+version = "0.0.1"
+description = "En ce projet, nous analyserons les mouvements des l\u00e8vres afin de tenter de pr\u00e9dire les mots prononc\u00e9s sans l'utilisation du son."
+authors = [
+  { name = "Adrian Ubeda Touati" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License"
+]
+requires-python = "~=3.12.6"
+
+[tool.black]
+line-length = 99
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.venv
+)/
+'''
+
+[tool.ruff.lint.isort]
+known_first_party = ["lecture_levre"]
+force_sort_within_sections = true
